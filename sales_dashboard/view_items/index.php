@@ -1,0 +1,1 @@
+<?php header("location:product_table") ?>

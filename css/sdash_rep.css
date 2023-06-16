@@ -1,0 +1,422 @@
+@media(max-width:880px){
+
+
+
+    #peon{
+        display: block;
+        margin-top: 0px;
+        float: left;
+        width:50px;
+        font-size: 30px;
+        background:  #dbdbdb;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    #losec{
+        display:block;
+        margin-top: 20px;
+        float: right;
+        width:50px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .main-div-container{
+        width:100%;
+        margin-left:0%;
+        padding:20px;
+        border:0px solid green;
+        height:auto;
+        float: left;
+    }
+    
+
+    .dashboard{
+        width:100%;
+        height:100%;
+        position: fixed;top:0;
+        visibility: hidden;
+        overflow: auto;
+        z-index: 10;
+    }   
+
+    .fir-div-container table tr td{
+        padding:30px;
+        margin:10px;
+        width:100%;
+        float: left;
+    }
+
+    .inner-secdc .fir-div-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+    }
+
+    .inner-secdc .fir-div-container table tr td{
+        width:50%;
+        padding:20px 5px;
+        margin:5px 0px;
+        float: left;
+    }
+
+    .con-btn{
+        padding:20px;
+        border-radius:10px;
+       
+    }
+
+    .msg{
+        width:100%;
+        height:100%;
+        padding:20px;
+        border-radius: 10px;
+        overflow: auto;
+    }
+
+    
+    .msgas{
+        width:100%;
+        height:100%;
+        padding:50px;
+        border-radius: 10px;
+    }
+
+    .con-mat{
+        visibility: hidden;
+        width:auto;
+        height:50px;
+        background:whitesmoke;
+        border-radius: 20px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+
+    .gen-feat-div{
+        height:auto;
+        overflow: auto;
+    }
+
+    .inner-fdi{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-sdi{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }   
+
+    .thr-dis-itm{
+        margin:20px 0px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+
+    .snd-inner-masag-ct .msg{
+        position: absolute;
+        width:80%;
+        height:60%;
+        padding:20px;
+    }
+
+
+    #u-form{
+        position:fixed;bottom:0px;left:0px;
+        width:90%;
+        height:15%;
+    }
+
+    .fst-inner-u-form{
+        height:auto;
+        width:85%;
+    }
+    
+    
+    .snd-inner-u-form{
+        height:auto;
+        width:15%;
+    }    
+
+
+    .saved-itm{
+        width:100%;
+        height:250px;
+        padding:5px;
+        margin:20px 0px;
+    }
+
+    .fst-saved-itm{
+        width:100%;
+        height:200px;
+        padding:10px;
+    }
+
+    .img-fsi{
+        width:30%;
+        height:100%;
+        border-radius: 5px;
+        overflow: hidden;
+        
+    }
+
+    .img-fsi img{
+        width:100%;
+        height:100%;
+        border-radius: 5px;
+        transition: 0.3s ease-in;
+    }
+
+        
+    .con-fsi{
+        width:65%;
+        padding:5px 10px;
+    }
+
+
+    .btn-snd-aicp button{
+        padding:5px;
+        margin:0px 5px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .snd-saved-itm{
+        width:100%;
+        height:20px;
+    }
+}
+
+
+@media(max-width:400px){
+
+
+
+    #peon{
+        display: block;
+        margin-top: 0px;
+        float: left;
+        width:50px;
+        font-size: 30px;
+        background:  #dbdbdb;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    #losec{
+        display:block;
+        margin-top: 20px;
+        float: right;
+        width:50px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .main-div-container{
+        width:100%;
+        margin-left:0%;
+        padding:20px;
+        border:0px solid green;
+        height:auto;
+        float: left;
+    }
+
+    .sec-div-container{
+        padding:20px;
+    }
+    
+
+    .dashboard{
+        width:100%;
+        height:100%;
+        position: fixed;top:0;
+        visibility: hidden;
+        z-index: 10;
+    }   
+
+        
+    .fir-div-container table tr td{
+        padding:20px;
+        margin:10px 0px;
+        width:100%;
+        float: left;
+    }
+
+    .seco-div-container .fir-div-container table tr td{
+        padding:20px 0px;
+        margin:10px 0px;
+        width:100%;
+        float: left;
+    }
+
+        
+    .inner-secdc .fir-div-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+    }
+
+    .inner-secdc .fir-div-container table tr td{
+        width:100%;
+    }
+    
+
+    .con-btn{
+        padding:20px;
+        border-radius:10px;
+        
+    }
+    
+
+    .msg{
+        width:100%;
+        height:500px;
+        padding:50px;
+        border-radius: 10px;
+    }
+
+    .msgas{
+        width:100%;
+        height:500px;
+        padding:50px;
+        border-radius: 10px;
+    }
+
+    .gen-feat-div{
+        height:auto;
+        width:200%;
+        overflow: auto;
+        display: flex;
+    }
+
+    .gen-feat-div table{
+        width:100%;
+    }
+    
+    .gen-feat-div table tr td{
+        padding:20px 0px;
+        margin:10px 0px;
+        width:100%;
+    }
+
+
+    .inner-sec-div-con{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 50px 0px;
+    }
+    
+    .inner-sec-div-con table{
+        width:100%;
+    }
+
+    .snd-inner-masag-ct .msg{
+        position: absolute;
+        width:80%;
+        height:50%;
+        padding:20px;
+    }
+
+    #u-form{
+        position:fixed;bottom:0px;left:0px;
+        width:100%;
+        height:15%;
+    }
+
+    .u-form{
+        height:100%;
+        width:100%;
+        
+    }
+
+    .fst-inner-u-form{
+        height:auto;
+        width:70%;
+    }
+    
+    
+    .snd-inner-u-form{
+        height:auto;
+        width:30%;
+    }
+
+
+    .fst-change-prof{
+        padding:10px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fst-change-prof div{
+        padding:10px 0px;
+    }
+
+        
+    .saved-itm{
+        width:150%;
+        height:250px;
+        padding:5px;
+        margin:20px 0px;
+        overflow: auto;
+    }
+
+    .fst-saved-itm{
+        width:100%;
+        height:200px;
+        padding:10px;
+        overflow: auto;
+    }
+
+    .img-fsi{
+        width:35%;
+        height:100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .img-fsi img{
+        width:100%;
+        height:100%;
+        border-radius: 5px;
+        transition: 0.3s ease-in;
+    }
+
+        
+    .con-fsi{
+        width:50%;
+        padding:5px 10px;
+    }
+
+
+    .btn-snd-aicp button{
+        padding:5px;
+        margin:0px 5px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .snd-saved-itm{
+        width:100%;
+        height:20px;
+    }
+    
+}
