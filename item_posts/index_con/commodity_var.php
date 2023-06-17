@@ -1,5 +1,4 @@
-<script src='../../js/jquery.js'></script>
-<script src='../../js/ajax.js'></script>
+
 <?php 
 session_start();  
 if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
@@ -20,25 +19,24 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
                 }else {
                 while ($tow = $sel_tran->fetch_assoc()) {
     ?>
+        <?php 
+            $usn = str_replace(' ','-',$tow['sel_name']); 
+            $dubUSN = $usn.'-'.$tow['sel_id'];
+        ?>
         <div class="ssc-main-inner">
             <!-- a trending ad -->
             
-           
-            
-            
+            <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
             <div class="ssc-main-img"> 
                 <!--item img--> 
                 
                 <div class="inner-scc-main-img">
-                    <?php 
-                        $usn = str_replace(' ','-',$tow['sel_name']); 
-                        $dubUSN = $usn.'-'.$tow['sel_id'];
-                    ?>
-                    <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
-                        <img src="../../pics/<?php echo $tow['img']; ?>" class="img-ismm" >
-                    </a>
-
-                
+                    
+                    
+                    
+                    <img src="../../pics/<?php echo $tow['img']; ?>" class="img-ismm" >
+                    
+                    
                     <div class="fst-other-ismm">
                         <!-- number of items -->
                         <?php  
@@ -47,42 +45,17 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
                         ?> 
                     </div>
 
-                    <div class="snd-other-ismm">
-                        <!-- save product to view in your saved -->
+                    
 
-                        <?php if (!isset($_SESSION['id'])) { ?>
-                            <a href="../../sales_auth/login/login">
-                                <img src="../../images/save.svg" title="save commodity">
-                            </a>
-                        <?php }else{ ?>
-                        
-                        <?php
-                            $selSave = $sel_ob->sel_save_id($tow['id'],$_SESSION['id']);
-                        ?>
-                        
-                        <?php if ($selSave->num_rows>0) { ?>
-                            <form class="sdel" action="../../saved/del_saved.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                <button><img src="../../images/save-fill.svg" title="remove from saved"></button>
-                            </form>
-                            
-                        <?php }else{ ?>
-                            <form class="sinp" action="../../saved/input_saved.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                <button><img src="../../images/save.svg" title="save commodity"></button>
-                            </form>
-                            
-                        <?php } ?>
-                        
-                        <?php } ?>
-                        
-                    </div>
                 </div>
                 
                 
             </div>
-            
+            </a>
 
+            
+            
+            <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
             <div class="ssc-main-content">
                 
                 <div class="price-smc"> 
@@ -118,6 +91,7 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
                     ?>
                 </div>
             </div>
+            </a>
         </div>
     <?php  } } } ?> 
     <?php }else {  ?>
@@ -134,25 +108,24 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
             
             while ($tow = $sel_tran->fetch_assoc()) {
     ?>
+        <?php 
+            $usn = str_replace(' ','-',$tow['sel_name']); 
+            $dubUSN = $usn.'-'.$tow['sel_id'];
+        ?>
         <div class="ssc-main-inner">
             <!-- a trending ad -->
             
-           
-            
-            
+            <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
             <div class="ssc-main-img"> 
                 <!--item img--> 
                 
                 <div class="inner-scc-main-img">
-                    <?php 
-                        $usn = str_replace(' ','-',$tow['sel_name']); 
-                        $dubUSN = $usn.'-'.$tow['sel_id'];
-                    ?>
-                    <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
-                        <img src="../../pics/<?php echo $tow['img']; ?>" class="img-ismm" >
-                    </a>
-
-                
+                    
+                    
+                    
+                    <img src="../../pics/<?php echo $tow['img']; ?>" class="img-ismm" >
+                    
+                    
                     <div class="fst-other-ismm">
                         <!-- number of items -->
                         <?php  
@@ -161,42 +134,17 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
                         ?> 
                     </div>
 
-                    <div class="snd-other-ismm">
-                        <!-- save product to view in your saved -->
+                    
 
-                        <?php if (!isset($_SESSION['id'])) { ?>
-                            <a href="../../sales_auth/login/login">
-                                <img src="../../images/save.svg" title="save commodity">
-                            </a>
-                        <?php }else{ ?>
-                        
-                        <?php
-                            $selSave = $sel_ob->sel_save_id($tow['id'],$_SESSION['id']);
-                        ?>
-                        
-                        <?php if ($selSave->num_rows>0) { ?>
-                            <form class="sdel" action="../../saved/del_saved.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                <button><img src="../../images/save-fill.svg" title="remove from saved"></button>
-                            </form>
-                            
-                        <?php }else{ ?>
-                            <form class="sinp" action="../../saved/input_saved.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                <button><img src="../../images/save.svg" title="save commodity"></button>
-                            </form>
-                            
-                        <?php } ?>
-                        
-                        <?php } ?>
-                        
-                    </div>
                 </div>
                 
                 
             </div>
-            
+            </a>
 
+            
+            
+            <a href="../../item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
             <div class="ssc-main-content">
                 
                 <div class="price-smc"> 
@@ -232,6 +180,7 @@ if (isset($_GET['items']) AND isset($_GET['pn']) AND isset($_GET['id'])) {  ?>
                     ?>
                 </div>
             </div>
+            </a>
         </div>
     <?php  } } }  ?>
 </div>

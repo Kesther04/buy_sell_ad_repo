@@ -157,21 +157,22 @@
                         while ($tow = $sel_trend->fetch_assoc()) {
                 
                 ?>
+                <?php 
+                    $usn = str_replace(' ','-',$tow['sel_name']); 
+                    $dubUSN = $usn.'-'.$tow['sel_id'];
+                ?>
+                
                     <div class="ssc-main-inner">
                         <!-- a trending ad -->
                         
-                        
+                        <a href="item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
                         <div class="ssc-main-img"> 
                             <!--item img--> 
                             
                             <div class="inner-scc-main-img">
-                                <?php 
-                                    $usn = str_replace(' ','-',$tow['sel_name']); 
-                                    $dubUSN = $usn.'-'.$tow['sel_id'];
-                                ?>
-                                <a href="item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
+                                
                                     <img src="pics/<?php echo $tow['img']; ?>" class="img-ismm" >
-                                </a>
+                                
 
                             
                                 <div class="fst-other-ismm">
@@ -182,42 +183,47 @@
                                     ?> 
                                 </div>
 
-                                <div class="snd-other-ismm">
-                                    <!-- save product to view in your saved -->
+                                
 
-                                    <?php if (!isset($_SESSION['id'])) { ?>
-                                        <a href="sales_auth/login/login">
-                                            <img src="images/save.svg" title="save commodity">
-                                        </a>
-                                    <?php }else{ ?>
-                                    
-                                    <?php
-                                        $selSave = $sel_ob->sel_save_id($tow['id'],$_SESSION['id']);
-                                    ?>
-                                    
-                                    <?php if ($selSave->num_rows>0) { ?>
-                                        <form class="sdel" action="saved/del_saved.php" method="post">
-                                            <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                            <button><img src="images/save-fill.svg" title="remove from saved"></button>
-                                        </form>
-                                        
-                                    <?php }else{ ?>
-                                        <form class="sinp" action="saved/input_saved.php" method="post">
-                                            <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
-                                            <button><img src="images/save.svg" title="save commodity"></button>
-                                        </form>
-                                        
-                                    <?php } ?>
-                                    
-                                    <?php } ?>
-                                    
-                                </div>
                             </div>
                             
+
                             
                         </div>
+                        </a>
                         
+                        <div class="snd-other-ismm">
+                            <!-- save product to view in your saved -->
 
+                            <?php if (!isset($_SESSION['id'])) { ?>
+                                <a href="sales_auth/login/login">
+                                    <img src="images/save.svg" title="save commodity">
+                                </a>
+                            <?php }else{ ?>
+                            
+                            <?php
+                                $selSave = $sel_ob->sel_save_id($tow['id'],$_SESSION['id']);
+                            ?>
+                            
+                            <?php if ($selSave->num_rows>0) { ?>
+                                <form class="sdel" action="saved/del_saved.php" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
+                                    <button><img src="images/save-fill.svg" title="remove from saved"></button>
+                                </form>
+                                
+                            <?php }else{ ?>
+                                <form class="sinp" action="saved/input_saved.php" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $tow['id']; ?>" required readonly>
+                                    <button><img src="images/save.svg" title="save commodity"></button>
+                                </form>
+                                
+                            <?php } ?>
+                            
+                            <?php } ?>
+                            
+                        </div>
+
+                        <a href="item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
                         <div class="ssc-main-content">
                             <div> 
                                 <!--item name--> 
@@ -232,8 +238,10 @@
                             </div>
 
                         </div>
+                        </a>
 
                     </div>
+                
                 <?php  } }  ?>
             </div>
         </div>

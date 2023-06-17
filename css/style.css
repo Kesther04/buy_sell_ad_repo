@@ -699,8 +699,8 @@ button{
 
 
 .snd-other-ismm{
-    position: absolute;bottom:0px;right:0px;
-    background:rgba(50,50,50,0.6);
+    position: absolute;bottom:20px;right:20px;
+    background:white;
     width:30px;
     height:30px;
     cursor: pointer;
