@@ -9,7 +9,7 @@
     <script src="../../js/jquery.js"></script>
     <script src="../../js/ajax.js"></script>
     <script src="../../js/rev.js"></script>
-
+    <script src="../../js/snd_dash.js"></script>
     
     <!-- <script src="../../../js/metro.js"></script> -->
     <title>DASHBOARD</title>

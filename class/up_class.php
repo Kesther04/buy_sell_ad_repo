@@ -28,6 +28,22 @@
             return $update;
         }
 
+        public function upd_sel_img_cat_tb($gic_img,$imcat){
+            require("d_con/database_connection.php");
+    
+            $update = $con->query("UPDATE category_table SET gic_img='$gic_img' WHERE  group_in_cat = '$imcat'");
+    
+            return $update;
+        }
+
+        public function upd_sel_img_cat_main_tb($ic_img,$icat){
+            require("d_con/database_connection.php");
+    
+            $update = $con->query("UPDATE category_table SET ic_img='$ic_img' WHERE  item_cat = '$icat'");
+    
+            return $update;
+        }
+
         
         public function upd_feat_tb($fp,$fn,$id){
             require("d_con/database_connection.php");

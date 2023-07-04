@@ -53,16 +53,21 @@
     .login-sec{
         width:100%;
         height:auto;
+        margin:100px 0px;
     }
 
     .login-sec table{
-        margin:20px;
+        margin:0px;
+        padding:0px;
     }
 
     .login-sec table tr td{
         width:100%;
         float: left;
+        padding:10px 0px;
+        margin:0px;
     }
+
 
 
     .form-sec{
@@ -72,9 +77,18 @@
     }
 
     .form-sec table tr td {
-        margin:0;
-        width:100%;
+        width:auto;
         float: left;
+        padding:10px 0px;
+        margin:0px;
+    }
+
+    .form-sec table tr td input,.form-sec table tr td select{
+        width:250px;
+    }
+
+    .login-sec table tr td input,.login-sec table tr td select{
+        width:250px;
     }
 }
 

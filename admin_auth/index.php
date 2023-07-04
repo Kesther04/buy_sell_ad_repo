@@ -1,1 +1,1 @@
-<?php  header("location:../"); ?>
+<script>window.location="login.php"</script>

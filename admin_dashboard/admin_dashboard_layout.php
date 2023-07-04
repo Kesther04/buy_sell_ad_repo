@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if(!isset($_SESSION['admin_id'])){
-        header('location:../../admin_auth/login/login.php');
+        echo "<script>window.location='../../admin_auth/login.php'</script>";
     }
 ?>
 
@@ -34,6 +34,14 @@
         </div>
 
         <div class="dash-b">
+            <a href="../cat_img/">
+                <span title="Update Images of already uploaded categories">
+                    <img src="../../images/item_upload.svg"  class="fir-img"><img src="../../images/lblog.svg" class="sec-img">UPLOAD IMAGES
+                </span>
+            </a>
+        </div>
+
+        <div class="dash-b">
             <a href="../cat_update/cat_update">
                 <span title="Upload more features for already existing category as well as update of features">
                 <img src="../../images/upd-fill.svg"  class="fir-img"><img src="../../images/upd.svg" class="sec-img">UPDATE CATEGORY
@@ -45,7 +53,7 @@
         <div class="dash-b">
            
                 
-            <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../admin_auth/login/login.php';}">
+            <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../admin_auth/login.php';}">
                 <span>
                     <img src="../../images/box_log (2).svg"  class="fir-img"><img src="../../images/litem.svg" class="sec-img">LOG OUT
                 </span>

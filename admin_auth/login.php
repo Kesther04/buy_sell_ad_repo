@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sales_login.css" media="all">
-    <link rel="stylesheet" href="../../css/sales_login_rep.css" media="all">
+    <link rel="stylesheet" href="../css/sales_login.css" media="all">
+    <link rel="stylesheet" href="../css/sales_login_rep.css" media="all">
     <title>LOGIN</title>
 </head>
 <body>
@@ -44,12 +44,12 @@
             </td>
         </tr>
 
-        <script src="../../js/jquery.js"></script>
-        <script src="../../js/reg.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/reg.js"></script>
 
         <tr>
             <td>
-                <i><a href="../register/register.php" title="Create an Account as a vendor">CREATE ACCOUNT</a></i>
+                <i><a href="register.php" title="Create an Account as a vendor">CREATE ACCOUNT</a></i>
             </td>
         </tr>
 

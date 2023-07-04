@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if(!isset($_SESSION['id'])){
-        header('location:../../sales_auth/login/login.php');
+        echo "<script>window.location='../../sales_auth/login.php'</script>";
     }
 ?>
 
@@ -78,7 +78,7 @@
 
         <div class="dash-b">
 
-            <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../sales_auth/login/login.php';}">
+            <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../sales_auth/login.php';}">
                 <span>
                     <img src="../../images/box_log (2).svg"  class="fir-img"><img src="../../images/litem.svg" class="sec-img">LOG OUT
                 </span>

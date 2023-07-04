@@ -312,6 +312,14 @@
             return $select;
         }
 
+        public function cat_tb_itmcat($icat){
+            require("d_con/database_connection.php");
+    
+            $select = $con->query(" SELECT * FROM category_table WHERE item_cat = '$icat' ");
+    
+            return $select;
+        }
+
         public function cat_tb_grpcat($icat){
             require("d_con/database_connection.php");
     
@@ -379,6 +387,23 @@
             return $select;
         }
 
+        public function sel_cu_msg($cid){
+            require("d_con/database_connection.php");
+    
+            $select = $con->query(" SELECT * FROM user_msg WHERE convo_id = '$cid' GROUP BY date ");
+    
+            return $select;
+        }
+
+        public function sel_du_msg($date){
+            require("d_con/database_connection.php");
+    
+            $select = $con->query(" SELECT * FROM user_msg WHERE date = '$date' ");
+    
+            return $select;
+        }
+        
+
         public function sel_su_msg(){
             require("d_con/database_connection.php");
     
@@ -414,10 +439,10 @@
             return $select;
         }
 
-        public function sel_dub_reply($id,$rr){
+        public function sel_dub_reply($id){
             require("d_con/database_connection.php");
     
-            $select = $con->query(" SELECT * FROM reply_table WHERE com_id = '$id' AND reply_rep = '$rr'   ");
+            $select = $con->query(" SELECT * FROM reply_table WHERE com_id = '$id' ");
     
             return $select;
         }
@@ -436,6 +461,14 @@
             require("d_con/database_connection.php");
     
             $select = $con->query(" SELECT * FROM reply_table WHERE com_id = '$id' AND reply_rep = '$rr' ORDER BY id DESC  LIMIT 5  ");
+    
+            return $select;
+        }
+
+        public function sel_onl_replyly($id){
+            require("d_con/database_connection.php");
+    
+            $select = $con->query(" SELECT * FROM reply_table WHERE com_id = '$id' LIMIT 5  ");
     
             return $select;
         }

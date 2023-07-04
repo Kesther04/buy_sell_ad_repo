@@ -13,6 +13,7 @@
 <body id='total-div'>
 
     <section id='masag'>
+        
         <div class='msg'>    
             <button class='aj-btn'>Back</button>
             <div class='msa'></div>
@@ -34,7 +35,7 @@
                 <form class='comfm' action='backend_feedback.php' method='post'>
                     <h1>Feedback</h1>
                     <table>
-                        <tr> <td><textarea name='com'  id='com-txt' placeholder='Type in your Feedback on this seller' required></textarea></td>
+                        <tr> <td><input type="text" name='com'  id='com-txt' placeholder='Type in your Feedback on this seller' required></td>
                         <input type='hidden' name='fnm'  value='<?php echo $_SESSION['name']; ?>' required readonly>
                         <input type='hidden' name='email'  value='<?php echo $_SESSION['email']; ?>' required readonly>
                         <input type='hidden' name='uid'  value='<?php echo $_SESSION['id']; ?>' required readonly>
@@ -149,7 +150,7 @@
                             
                             
                             <?php
-                                 $sel_gon = $sel_ob->sel_dub_replyly($row['id'],0);
+                                 $sel_gon = $sel_ob->sel_onl_replyly($row['id']);
                                 if ($sel_gon) { while ($dow = $sel_gon->fetch_assoc()) {
                             ?>
                                 <div class="inner-reply">

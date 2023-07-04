@@ -1,6 +1,6 @@
 <?php 
     if(!isset($_SESSION['id'])){
-        header('location:../../sales_auth/login/login.php');
+        echo "<script>window.location='../../sales_auth/login.php'</script>";
     }
 ?>
 
@@ -24,17 +24,17 @@
         <div class="nav thr-header">
             <ul>
                 <?php if (!isset($_SESSION['id'])) { ?>
-                    <li><a href="../../sales_auth/login/login">Sign in</a></li>
-                    <li><a href="../../sales_auth/register/register">Registration</a></li>
-                    <li><a href="../../sales_dashboard/item_upload/item_upload" id="sel-nav">SELL</a></li>
+                    <li><a href="../../sales_auth/login.php">Sign in</a></li>
+                    <li><a href="../../sales_auth/register.php">Registration</a></li>
+                    <li><a href="../../sales_dashboard/item_upload.php" id="sel-nav">SELL</a></li>
                 
                 <?php }else{ ?>
                     
                     <li><a href="../../">Home</a></li>
-                    <li><a href="../../sales_dashboard/user/profile">Profile</a></li>
-                    <li><a href="../../sales_dashboard/user/saved">Saved</a></li>
+                    <li><a href="../../sales_dashboard/user/profile.php">Profile</a></li>
+                    <li><a href="../../sales_dashboard/user/saved.php">Saved</a></li>
                     <li><a href="../../sales_dashboard/chat/">Messages</a></li>
-                    <li><a href="../../sales_dashboard/item_upload/item_upload" id="sel-nav">SELL</a></li>
+                    <li><a href="../../sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
                 
                 <?php  } ?>
                 

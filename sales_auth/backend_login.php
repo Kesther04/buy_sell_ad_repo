@@ -6,19 +6,19 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     
-    require("../../class/sel_class.php");
+    require("../class/sel_class.php");
 
     $sel_ob = new SEL();
 
 
     if (empty($email)) {
-        header("location:login.php?msg=ENTER YOUR EMAIL ADDRESS");
+        echo "<script>window.location='login.php?msg=ENTER YOUR EMAIL ADDRESS'</script>";
     }
     elseif (empty($pass)) {
-        header("location:login.php?msg=ENTER YOUR PASSWORD");
+        echo "<script>window.location='login.php?msg=ENTER YOUR PASSWORD'</script>";
     }
     elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-        header("location:login.php?msg=INVALID EMAIL ADDRESS");
+        echo "<script>window.location='login.php?msg=INVALID EMAIL ADDRESS'</script>";
     }else {
         //to select from the database where email and password provided are available
         $sel_con = $sel_ob->sel_log($email,$pass);
@@ -33,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
             $_SESSION['lga'] = $row['lga'];
             $_SESSION['des'] = $row['des'];
     
-            header("location:../../sales_dashboard/item_upload/item_upload");
+            echo "<script>window.location='../sales_dashboard/item_upload/item_upload'</script>";
         }else {
-            header("location:login.php?msg=INCORRECT EMAIL OR PASSWORD");
+            echo "<script>window.location='login.php?msg=INCORRECT EMAIL OR PASSWORD'</script>";
         }
     }
 }

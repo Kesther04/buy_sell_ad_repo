@@ -39,17 +39,17 @@
                 <div class="nav thr-header">
                     <ul>
                         <?php if (!isset($_SESSION['id'])) { ?>
-                            <li><a href="sales_auth/login/login">Sign in</a></li>
-                            <li><a href="sales_auth/register/register">Registration</a></li>
-                            <li><a href="sales_dashboard/item_upload/item_upload" id="sel-nav">SELL</a></li>
+                            <li><a href="sales_auth/login.php">Sign in</a></li>
+                            <li><a href="sales_auth/register.php">Registration</a></li>
+                            <li><a href="sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
                         
                         <?php }else{ ?>
                             
                             <li><a href="">Home</a></li>
-                            <li><a href="sales_dashboard/user/profile">Profile</a></li>
-                            <li><a href="sales_dashboard/user/saved">Saved</a></li>
+                            <li><a href="sales_dashboard/user/profile.php">Profile</a></li>
+                            <li><a href="sales_dashboard/user/saved.php">Saved</a></li>
                             <li><a href="sales_dashboard/chat/">Messages</a></li>
-                            <li><a href="sales_dashboard/item_upload/item_upload" id="sel-nav">SELL</a></li>
+                            <li><a href="sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
                         
                         <?php  } ?>
                         
@@ -109,6 +109,16 @@
                         ?>
                             
                             <li>
+                                <?php
+                                    $sel_cat_img = $sel_ob->cat_tb_itmcat($im);
+                                    if ($sel_cat_img) {$cdow = $sel_cat_img->fetch_assoc();
+                                ?>
+                                    <?php if ($cdow['ic_img'] == '0') { echo "<div class='cat-img'></div>"; }else{ ?>
+                                        <div class="cat-img">
+                                            <img src="pack_image/<?php echo $cdow['ic_img']; ?>" width="50">
+                                        </div>
+                                    <?php } ?>
+                                <?php } ?>
                                 <?php 
                                     echo str_replace('-',' ',$row['item_cat']);
                                     if(mysqli_num_rows($selt) == 1){
@@ -118,6 +128,14 @@
                                     } 
                                 ?>
                                 <ul>
+                                    <li class="backfst-nav">
+                                        
+                                        <div class="inner-masag-cot-back" title="back to page">
+                                            <img src="images/arro.svg" width="30" class="sec-img">
+                                            <img src="images/arro-fill.svg" width="30" class="fir-img">
+                                        </div>
+                                        
+                                    </li>
                                     <?php 
                                         $sel_don = $sel_ob->sel_namegp($im);
                                         if ($sel_don) {
@@ -126,7 +144,18 @@
                                                 $selc = $sel_ob->sel_catnamegp($group);
                                     ?>
                                         <a href="cat_posts/<?php echo $dow['item_cat'].'/'.$group ?>">
+                                        
                                             <li>
+                                                <?php
+                                                    $sel_mcat_img = $sel_ob->cat_tbin_cat($group);
+                                                    if ($sel_mcat_img) {$cdow = $sel_mcat_img->fetch_assoc();
+                                                ?>
+                                                    <?php if ($cdow['gic_img'] == '0') { echo "<div class='cat-img'></div>"; }else{ ?>
+                                                        <div class="cat-img">
+                                                            <img src="pack_image/<?php echo $cdow['gic_img']; ?>" width="50">
+                                                        </div>
+                                                    <?php } ?>
+                                                <?php } ?>
                                                 <?php 
                                                     echo str_replace('-',' ',$dow['group_in_cat']);
                                                     if(mysqli_num_rows($selc) == 1){
@@ -146,6 +175,7 @@
                 </nav>
             </div>
         </div>
+        
 
         <div class="snd-snd-container">
             <!-- the part of the page for showing trending ads -->
@@ -166,30 +196,30 @@
                         <!-- a trending ad -->
                         
                         <a href="item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
-                        <div class="ssc-main-img"> 
-                            <!--item img--> 
-                            
-                            <div class="inner-scc-main-img">
+                            <div class="ssc-main-img"> 
+                                <!--item img--> 
                                 
-                                    <img src="pics/<?php echo $tow['img']; ?>" class="img-ismm" >
-                                
+                                <div class="inner-scc-main-img">
+                                    
+                                        <img src="pics/<?php echo $tow['img']; ?>" class="img-ismm" >
+                                    
 
-                            
-                                <div class="fst-other-ismm">
-                                    <!-- number of items -->
-                                    <?php  
-                                        $sel_tum = $sel_ob->sel_img_id($tow['id']);
-                                        echo mysqli_num_rows($sel_tum);
-                                    ?> 
+                                
+                                    <div class="fst-other-ismm">
+                                        <!-- number of items -->
+                                        <?php  
+                                            $sel_tum = $sel_ob->sel_img_id($tow['id']);
+                                            echo mysqli_num_rows($sel_tum);
+                                        ?> 
+                                    </div>
+
+                                    
+
                                 </div>
-
                                 
 
+                                
                             </div>
-                            
-
-                            
-                        </div>
                         </a>
                         
                         <div class="snd-other-ismm">
@@ -224,20 +254,20 @@
                         </div>
 
                         <a href="item_posts/<?php echo $dubUSN.'/'.$tow['item_name']; ?>">
-                        <div class="ssc-main-content">
-                            <div> 
-                                <!--item name--> 
-                                <?php echo str_replace('-',' ',$tow['item_name']); ?>
-                               
-                            </div>
-                            
+                            <div class="ssc-main-content">
+                                <div> 
+                                    <!--item name--> 
+                                    <?php echo str_replace('-',' ',$tow['item_name']); ?>
+                                
+                                </div>
+                                
 
-                            <div class="price-smc"> 
-                                <!--item price--> 
-                                <?php echo 'N'.number_format($tow['price'],3); ?>
-                            </div>
+                                <div class="price-smc"> 
+                                    <!--item price--> 
+                                    <?php echo 'N'.number_format($tow['price'],3); ?>
+                                </div>
 
-                        </div>
+                            </div>
                         </a>
 
                     </div>
@@ -309,7 +339,7 @@
     </section>
     
     
-    
+
     <script src="js/bin_cd.js"></script>
     <script src="js/eee.js"></script>
     <script src="js/jquery.js"></script>

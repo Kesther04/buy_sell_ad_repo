@@ -11,7 +11,7 @@
 
         <table>
             <tr> 
-                <td><textarea name='com'  id='rep-txt' placeholder='Type in your Reply for this Feedback' required></textarea></td>
+                <td><input type="text" name='com'  id='rep-txt' placeholder='Type in your Reply for this Feedback' required></td>
                 <input type='hidden' name='cid'  value='<?php echo $_POST['cid']; ?>' required readonly>
                 <input type='hidden' name='sid'  value='<?php echo $_POST['sid']; ?>' required readonly>
                 <input type='hidden' name='sname'  value='<?php echo $_POST['sname']; ?>' required readonly>
@@ -26,7 +26,7 @@
                             
         
         <?php
-            $sel_con = $sel_ob->sel_dub_reply($_POST['cid'],0);
+            $sel_con = $sel_ob->sel_dub_reply($_POST['cid']);
              if ($sel_con->num_rows>0) { while ($dow = $sel_con->fetch_assoc()) {
         ?>
             <div class="inner-feedback">

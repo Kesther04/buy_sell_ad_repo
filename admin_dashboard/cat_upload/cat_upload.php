@@ -9,7 +9,7 @@
     <script src="../../js/jquery.js"></script>
     <script src="../../js/feat.js"></script>
     <script src="../../js/ajax.js"></script>
-
+    <script src="../../js/snd_dash.js"></script>
     
     <!-- <script src="../../../js/metro.js"></script> -->
     <title>DASHBOARD</title>
@@ -42,15 +42,13 @@
                     <tr>
                         <td>
                             <span>Item Category</span>
-                            <input type="text" name="icat"  required>
+                            <input type="text" name="icat" placeholder="Enter Item Category" required>
                         </td>
 
                         <td>
                             <span>Main Item Category</span>
-                            <input type="text" name="micat" required>
-                        </td>
-
-                        
+                            <input type="text" name="micat" placeholder="Enter Main Item Category" required>
+                        </td>  
                     </tr>
 
                     <tr>

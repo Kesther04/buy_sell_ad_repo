@@ -10,6 +10,17 @@ $(document).ready(function () {
     
     }); 
 
+    $("#item").change(function () {
+        // $(".itit").css({'visibility':'visible'});
+        var catna = $("#item").val();
+        var batna = $("#cat").val();
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET","full_cat_img.php?items="+catna+"&bitem="+batna,false);
+        xmlhttp.send(null);
+        $(".itit").html(xmlhttp.responseText);
+    
+    }); 
+
     $("#igroup").change(function () {
         var group = $("#igroup").val();
         xmlhttp = new XMLHttpRequest();

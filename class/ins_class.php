@@ -43,10 +43,10 @@
             return $insert;
         }
 
-        public function ins_cat_upl($icat,$gic,$fn,$fp,$date,$time){
+        public function ins_cat_upl($icat,$ic_img,$gic,$gic_img,$fn,$fp,$date,$time){
             require("d_con/database_connection.php");
     
-            $insert = $con->query("INSERT INTO category_table (item_cat,group_in_cat,feature_name,feature_prop,date,time)VALUE('$icat','$gic','$fn','$fp','$date','$time')");
+            $insert = $con->query("INSERT INTO category_table (item_cat,ic_img,group_in_cat,gic_img,feature_name,feature_prop,date,time)VALUE('$icat','$ic_img','$gic','$gic_img','$fn','$fp','$date','$time')");
     
             return $insert;
         }

@@ -1,6 +1,6 @@
 <?php
 
-    require('class/d_con/database_connection.php');
+    // require('class/d_con/database_connection.php');
 
     // $select = $con->query(" SELECT * FROM item_table ");
     // if($select){
@@ -27,10 +27,12 @@
 
     // print_r(str_split("Hello",3));
 
-    // $update = $con->query("UPDATE seller_reg_tb SET des = 0 WHERE id = 2 ");
+    // $update = $con->query("UPDATE category_table SET gic_img = 0 ");
     // if ($update) {
     //     echo "upd successful";
     // }
 
+
+    
 ?>
 

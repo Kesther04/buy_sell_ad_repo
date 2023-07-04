@@ -102,7 +102,9 @@
     $cat_tb = $con->query("CREATE TABLE if not exists category_table
     (id int(100)not null primary key auto_increment,
     item_cat text not null,
+    ic_img text not null,
     group_in_cat text not null,
+    gic_img text not null,
     feature_name varchar(150)not null,
     feature_prop text not null,
     date varchar(20)not null,

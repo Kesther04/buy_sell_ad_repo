@@ -4,13 +4,13 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $pno = $_POST['pno'];
-    require("../../date_la_time.php");
+    require("../date_la_time.php");
 
-    require("../../class/ins_class.php");
+    require("../class/ins_class.php");
 
     $ins_ob = new INS();
 
-    require("../../class/sel_class.php");
+    require("../class/sel_class.php");
 
     $sel_ob = new SEL();
 
@@ -24,16 +24,16 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
         if ($row['email'] == $email AND $row['password'] == $pass) {
             
-            header("location:register.php?msg=PASSWORD ALREADY IN USE PLEASE CREATE ANOTHER PASSWORD");
+            echo "<script>window.location='register.php?msg=PASSWORD ALREADY IN USE PLEASE CREATE ANOTHER PASSWORD'</script>";
     
         }else {
         
             //to insert all posted values into the table for registration of sales person
             $ins_con = $ins_ob->ins_admin_reg($full,$email,$pass,$pno,$date,$time);
             if ($ins_con) {
-                header("location:../login/login.php");
+                echo "<script>window.location='login.php'</script>";
             }else {
-                header("location:register.php?msg=NOT REGISTERED");
+                echo "<script>window.location='register.php?msg=NOT REGISTERED'</script>";
             }
 
         }

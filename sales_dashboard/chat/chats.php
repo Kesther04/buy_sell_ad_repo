@@ -23,54 +23,72 @@
             <?php
 
                 $rid = $_GET['id'];
+                $sid = $_SESSION['id'];
                 $rname = str_ireplace('-',' ',$_GET['name']);
                 
                 require("../../class/sel_class.php");
                 $sel_ob = new SEL();
             
-                    echo "<h1 style='text-transform:uppercase;'>$rname</h1>";
+                echo "<h1 style='text-transform:uppercase;'>$rname</h1>";
 
+                if ($sid > $rid) {
+                    $cid = $rid.'.'.$sid;
+                }else{
+                    $cid = $sid.'.'.$rid;
+                }
+            
+                $sel_don = $sel_ob->sel_cu_msg($cid);
+                if ($sel_don) {
+                    while($dow = $sel_don->fetch_assoc()){
+                        if ($dow['date'] = date("d/m/Y")) {
+                            echo "<div class='dat-cht'><h3>Today</h3></div>";
+                        }else {
+                            echo "<div class='dat-cht'><h3>".$dow['date']."</h3></div>";
+                        }
+                     
                 
 
-                    $sel_con = $sel_ob->sel_u_msg();
-                    if($sel_con){
+                        $sel_con = $sel_ob->sel_du_msg($dow['date']);
+                        if($sel_con){
+                        
+                        
+
+                            while ($row=$sel_con->fetch_assoc()) {
+                                if (strstr($row['message']," *$* ")) {
+                                    $msg = str_replace(" *$* ","'",$row['message']);
+                                }else {
+                                    $msg = $row['message'];
+                                }
+
+                                $date = $row['date'];
+                                $time = $row['time'];
                     
+                                if ($row['username']==$_SESSION['name'] AND $row['user_id']==$_SESSION['id'] AND $row['rep_name']==$rname) {
+                                    echo "
+                                    <div class='selo'>
+                                        $msg
+                                        <div class='inner-sles'>
+                                            $time
+                                        </div>
+
+                                    </div>";
+                                }
+                                elseif ($row['username']==$rname AND $row['user_id']==$rid AND $row['rep_name']==$_SESSION['name']) {
+                                    echo "
+                                    <div class='leso'>
+                                        $msg
+                                        <div class='inner-sles'>
+                                            $time
+                                        </div>
+                                    </div>";
+                                }
+                                
                     
-
-                        while ($row=$sel_con->fetch_assoc()) {
-                            if (strstr($row['message']," *$* ")) {
-                                $msg = str_replace(" *$* ","'",$row['message']);
-                            }else {
-                                $msg = $row['message'];
-                            }
-
-                            $date = $row['date'];
-                            $time = $row['time'];
-                
-                            if ($row['username']==$_SESSION['name'] AND $row['user_id']==$_SESSION['id'] AND $row['rep_name']==$rname) {
-                                echo "
-                                <div class='selo'>
-                                    $msg
-                                    <div class='inner-sles'>
-                                        $time
-                                    </div>
-
-                                </div>";
-                            }
-                            elseif ($row['username']==$rname AND $row['user_id']==$rid AND $row['rep_name']==$_SESSION['name']) {
-                                echo "
-                                <div class='leso'>
-                                    $msg
-                                    <div class='inner-sles'>
-                                        $time
-                                    </div>
-                                </div>";
                             }
                             
-                
                         }
-                        
                     }
+                }
 
 
                 
@@ -84,15 +102,16 @@
                 <div class="u-form">
                     <div class="fst-inner-u-form">
                         <input type="text" name="msg" placeholder="SEND MESSAGE" required>
+                        <span class="snd-inner-u-form">
+                            <button>SEND</button>
+                        </span>
                         <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" required readonly>
                         <input type="hidden" name="uname" value="<?php echo $_SESSION['name'] ?>" required readonly>
                         <input type="hidden" name="email" value="<?php echo $_SESSION['email'] ?>" required readonly>
                         <input type="hidden" name="rid" value="<?php echo $_GET['id'];  ?>"  required readonly>
                         <input type="hidden" name="rname" value="<?php echo $rname;  ?>"  required readonly>
                     </div>
-                    <div class="snd-inner-u-form">
-                        <button class="con-btn" >SEND</button>
-                    </div>
+                    
                 </div>
             </form>
             

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sales_login.css" media="all">
-    <link rel="stylesheet" href="../../css/sales_login_rep.css" media="all">
+    <link rel="stylesheet" href="../css/sales_login.css" media="all">
+    <link rel="stylesheet" href="../css/sales_login_rep.css" media="all">
     <title>SIGN UP</title>
 </head>
 <body>
@@ -47,8 +47,8 @@
                     </span>
 
                     </td>
-                    <script src="../../js/jquery.js"></script>
-                    <script src="../../js/reed.js"></script>
+                    <script src="../js/jquery.js"></script>
+                    <script src="../js/reed.js"></script>
                 </tr>
     
                 <tr>
@@ -65,6 +65,6 @@
         
         </div>
 
-        <script src="../../js/loc_form.js"></script>
+        <script src="../js/loc_form.js"></script>
 </body>
 </html>

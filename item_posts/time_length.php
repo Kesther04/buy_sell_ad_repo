@@ -17,6 +17,7 @@
         echo $minus." days";
     }
     elseif ($day < $dlet AND $month == $mlet+1 AND $year == $ylet) {
+        $bminus = (28 - $dlet) + $day;
         $minus = (29 - $dlet) + $day;
         $mminus = (30 - $dlet) + $day;
         $mmminus = (31 - $dlet) + $day;
@@ -27,108 +28,20 @@
         elseif($dlet == 31){
             $dind = (31 - $dlet) + $day;
             echo $dind." day";
-        }else {
-            echo "About ".$minus.' - '.$mmminus.' days';
+        }
+        elseif($mlet == 1 OR $mlet == 3 OR $mlet == 5 OR $mlet == 7 OR $mlet == 8 OR $mlet == 10 OR $mlet == 12){
+            echo $mmminus." days";
+        }
+        elseif($mlet == 4 OR $mlet == 6 OR $mlet == 9 OR $mlet == 11){
+            echo $mminus." days";
+        }
+        elseif($mlet == 2){
+            echo "About ".$bminus.' - '.$minus.' days';
         }
        
     }else {
         echo $dow['fullDay'];
     }
-    
-    // elseif ($day < $dlet AND $month == $mlet+2 AND $year == $ylet ) {
-    //     $myinus  = $month - ($mlet+1);
-        
-    //     if ($dlet == 30) {
-           
-    //         echo $myinus.' month ago';
-    //     }
-    //     elseif($dlet == 31){
-    //         $dind = (31 - $dlet) + $day;
-    //         echo $myinus.' month ago';
-    //     }else {
-    //         echo $myinus." month ago";
-    //     }
-       
-    // }
-    // elseif ($day < $dlet AND $month >= $mlet AND $year == $ylet ) {
-    //     $myinus  = $month - ($mlet+1);
-        
-    //     if ($dlet == 30) {
-           
-    //         echo $myinus.' months ago';
-    //     }
-    //     elseif($dlet == 31){
-    //         $dind = (31 - $dlet) + $day;
-    //         echo $myinus.' months ago';
-    //     }else {
-    //         echo $myinus." months ago";
-    //     }
-       
-    // }
-    // elseif ($month == $mlet+1 AND $year == $ylet) {
-    //     $minus = $month - $mlet;
-    //     echo $minus." month";
-    // }
-    // elseif ($month >= $mlet AND $year == $ylet) {
-    //     $minus = $month - $mlet;
-    //     echo $minus." months";
-    // }
-    // elseif ($year == $ylet+1 AND $mlet == 12 AND $month == 1 ) {
-    //     $minus = (12 - $mlet) + $month;
-    //     echo $minus." month";
-    // }
-    // elseif ($year == $ylet+1 AND $month < $mlet) {
-    //     $minus = (12 - $mlet) + $month;
-    //     echo $minus." months";
-    // }
-    // elseif ($year == $ylet+1 AND $month == $mlet ) {
-    //     $minus = $year - $ylet;
-    //     echo $minus." year";
-    // }
-    // elseif ($year == $ylet+1 AND $month == $mlet+1) {
-    //     $yinus = $year - $ylet;
-    //     $minus = (12 - $mlet) + $month;
-    //     $mminus = $minus-12;
-    //     echo $yinus." year and ".$mminus." month";
-    // }
-    // elseif ($year == $ylet+1 AND $month > $mlet) {
-    //     $yinus = $year - $ylet;
-    //     $minus = (12 - $mlet) + $month;
-    //     $mminus = $minus-12;
-    //     echo $yinus." year and ".$mminus." months";
-    // }
-    // elseif ($year >= $ylet AND $month == $mlet+1) {
-    //     $yinus = $year - $ylet;
-    //     $minus = (12 - $mlet) + $month;
-    //     $mminus = $minus-12;
-    //     echo $yinus." years and ".$mminus." month";
-    // }
-    // elseif ($year >= $ylet AND $month > $mlet) {
-    //     $yinus = $year - $ylet;
-    //     $minus = (12 - $mlet) + $month;
-    //     $mminus = $minus-12;
-    //     echo $yinus." years and ".$mminus." months";
-    // }
-    // elseif ($year == $ylet+2 AND $month < $mlet) {
-    //     $yinus = $year - $ylet;
-    //     $minus = (12 - $mlet) + $month;
-       
-    //     echo "1 year and ".$minus." months";
-       
-    // }  
-    // elseif ($year >= $ylet AND $month < $mlet) {
-    //     $yinus = $year - $ylet;
-    //     $yyinus = $yinus-1;
-    //     $minus = (12 - $mlet) + $month;
-       
-    //     echo $yyinus." years and ".$minus." months";
-       
-    // }
-    // elseif ($year >= $ylet) {
-    //     $minus = $year - $ylet;
-    //     echo $minus." years";
-    // }  
-
     
 ?>
 

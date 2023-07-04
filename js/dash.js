@@ -30,5 +30,10 @@ $(document).ready(function () {
         $("#hide-con").css({'display':'none'});
     });
 
+    $(".inner-fst-snd-container nav ul li ul .backfst-nav .inner-masag-cot-back").click(function () {
+        $("inner-fst-snd-container nav ul li:focus > ul,.inner-fst-snd-container nav ul li:hover > ul").css({'visibility':'hidden','opacity':'0'});
+        $("#total-div").load("#total-div");
+    });
+
 
 })

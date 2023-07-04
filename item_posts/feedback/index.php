@@ -1,4 +1,12 @@
 <?php
+    $fdNm = basename(dirname($_SERVER['PHP_SELF']));
+    $pgNm = basename($_SERVER['PHP_SELF']);
+    if ($fdNm == "feedback" AND $pgNm == "index.php") {
+?>
+    <script>window.location="../../"</script>
+<?php  }else{ ?>
+
+<?php
     $sel_don = $sel_ob->sel_id_pro($sid);
     if($sel_don){
         $dow = $sel_don->fetch_assoc();
@@ -20,3 +28,5 @@
 
 
 <?php  } ?>
+
+<?php } ?>

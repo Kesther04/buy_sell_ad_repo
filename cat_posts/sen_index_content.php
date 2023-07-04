@@ -95,6 +95,19 @@
       <!-- container for viewing ad of this commodity category -->
       <h1><?php echo str_replace('-',' ',$pageName).' in Nigeria' ?></h1>
 
+      <div class="snd-mcpc-cat-img">
+        <?php
+          $sel_cat_img = $sel_ob->cat_tb_itmcat($pageName);
+          if ($sel_cat_img) {$cdow = $sel_cat_img->fetch_assoc();
+        ?>
+          <?php if ($cdow['ic_img'] == '0') { echo "<div class='cat-img'></div>"; }else{ ?>
+            <div class="cat-img">
+              <img src="../../pack_image/<?php echo $cdow['ic_img']; ?>">
+            </div>
+          <?php } ?>
+        <?php } ?>
+      </div>
+
       <div class="inner-snd-mcpc">
         <?php require('../sen_commodity.php'); ?>
       </div>

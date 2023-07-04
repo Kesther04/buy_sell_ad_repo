@@ -19,7 +19,7 @@
     <div id="masag">
         <div class="msg">    
             <div class="msa"></div>
-            <a href="../../sales_auth/login/login.php" title="return to the login page"><button class="aj-btn">COMPLETE</button></a>
+            <a href="../../sales_auth/login.php" title="return to the login page"><button class="aj-btn">COMPLETE</button></a>
         </div>
     </div>
     
