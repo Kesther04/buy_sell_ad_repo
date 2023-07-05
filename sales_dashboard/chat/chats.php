@@ -40,7 +40,7 @@
                 $sel_don = $sel_ob->sel_cu_msg($cid);
                 if ($sel_don) {
                     while($dow = $sel_don->fetch_assoc()){
-                        if ($dow['date'] = date("d/m/Y")) {
+                        if ($dow['date'] == date("d/m/Y")) {
                             echo "<div class='dat-cht'><h3>Today</h3></div>";
                         }else {
                             echo "<div class='dat-cht'><h3>".$dow['date']."</h3></div>";
