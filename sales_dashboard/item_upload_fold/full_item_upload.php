@@ -13,14 +13,12 @@
         
 ?>
 
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/np_form.js"></script>
-    <script src="../../js/ajax.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/np_form.js"></script>
+    <script src="../js/ajax.js"></script>
 
 
-    <form  class="itm_upl" action="backend_item_upload.php" method="post" enctype="multipart/form-data">
+    <form  class="itm_upl" action="item_upload_fold/backend_item_upload.php" method="post" enctype="multipart/form-data">
         
         <div class="sec-div-container">
 

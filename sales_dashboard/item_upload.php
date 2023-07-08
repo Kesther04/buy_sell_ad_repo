@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/rev.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/snd_dash.js"></script>
     
-    <!-- <script src="../../../js/metro.js"></script> -->
+    <!-- <script src="../js/metro.js"></script> -->
     <title>DASHBOARD</title>
     
 </head>
@@ -19,8 +19,8 @@
     
 
 <?php 
-    require("../sales_dashboard_layout.php"); 
-    require("../../class/sel_class.php");
+    require("sales_dashboard_layout.php"); 
+    require("../class/sel_class.php");
 ?>
 
 <div id="masag">
@@ -32,7 +32,7 @@
 
 <section class="main-div-container">
 
-    <form  class="full_itm_upl" action="full_item_upload.php" method="post" enctype="multipart/form-data">
+    <form  class="full_itm_upl" action="item_upload_fold/full_item_upload.php" method="post" enctype="multipart/form-data">
     
 
         <div class="sec-div-container">
@@ -96,8 +96,5 @@
 </section>
 
     
-    <script>
-    
-    </script>
 </body>
 </html>

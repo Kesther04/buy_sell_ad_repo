@@ -1,6 +1,6 @@
-<script src="../../js/jquery.js"></script>
-<script src="../../js/ajax.js"></script>
-<script src="../../js/snd_np_form.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/snd_np_form.js"></script>
 
 <?php
     require("../../class/sel_class.php");
@@ -19,7 +19,7 @@
 ?>
 
     
-<form class="itm_upld" action="backend_item_update.php" method="post" enctype="multipart/form-data">
+<form class="itm_upld" action="item_update_fold/backend_item_update.php" method="post" enctype="multipart/form-data">
     
 
     <div class="sec-div-container">
@@ -40,7 +40,7 @@
                 <div class="img-result">
                     <?php while ($dow = $sel_img->fetch_assoc()) { ?>
                         
-                        <img src="../../pics/<?php echo $dow['img'];  ?>" >
+                        <img src="../pics/<?php echo $dow['img'];  ?>" >
                     
                     <?php } ?>
                 </div>

@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "../../css/sdash.css" media ="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/snd_dash.js"></script>
-    <title>USER MESSAGES</title>
+    <link rel = "stylesheet" href = "../css/sdash.css" media ="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/rev.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/snd_dash.js"></script>
+    <title>DASHBOARD</title>
 </head>
 <body id="total-div">
     
-    <?php require("../sales_dashboard_layout.php"); ?>
+    <?php require("sales_dashboard_layout.php"); ?>
 
     <section class='main-div-container'>
 
         <div class="sec-div-container">
             <h1>All Chats</h1>
             <?php
-                require("../../class/sel_class.php");
+                require("../class/sel_class.php");
                 $sel_ob = new SEL();
                 
             ?>
@@ -50,9 +50,9 @@
                                 ?>
 
                                 <?php if($dimg['img'] == "0"){ ?>
-                                    <img src="../../images/user.svg">
+                                    <img src="../images/user.svg">
                                 <?php }else{ ?>    
-                                    <img src="../../pics/profile/<?php echo $dimg['img']; ?>">
+                                    <img src="../pics/profile/<?php echo $dimg['img']; ?>">
                                 <?php } ?>
                                 <?php } ?>
 
@@ -90,9 +90,9 @@
                                 ?>
 
                                 <?php if($dimg['img'] == "0"){ ?>
-                                    <img src="../../images/user.svg">
+                                    <img src="../images/user.svg">
                                 <?php }else{ ?>    
-                                    <img src="../../pics/profile/<?php echo $dimg['img']; ?>">
+                                    <img src="../pics/profile/<?php echo $dimg['img']; ?>">
                                 <?php } ?>
                                 <?php } ?>
 

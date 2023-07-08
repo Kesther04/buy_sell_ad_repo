@@ -25,7 +25,7 @@
             echo "<td id='preview-filex'></td>";
         }else { 
     ?>
-        <td id="preview-filex"><img src="../../pack_image/<?php echo $row['ic_img']; ?>" width="250"></td>
+        <td id="preview-filex"><img src="../pack_image/<?php echo $row['ic_img']; ?>" width="250"></td>
     <?php } ?>
     
 </tr>
@@ -42,7 +42,7 @@
             echo "<td id='preview-files'></td>";
         }else { 
     ?>
-        <td id="preview-files"><img src="../../pack_image/<?php echo $row['gic_img']; ?>" width="250"></td>
+        <td id="preview-files"><img src="../pack_image/<?php echo $row['gic_img']; ?>" width="250"></td>
     <?php } ?>
 </tr>
 

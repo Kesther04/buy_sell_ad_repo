@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(".cat-typ").css({'visibility':'visible','height':'100%','width':'100%'});
         var catna = $("#cat").val();
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","bf_item_upload.php?items="+catna,false);
+        xmlhttp.open("GET","item_upload_fold/bf_item_upload.php?items="+catna,false);
         xmlhttp.send(null);
         $("#item").html(xmlhttp.responseText);
     
@@ -15,7 +15,7 @@ $(document).ready(function () {
         var catna = $("#item").val();
         var batna = $("#cat").val();
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","full_cat_img.php?items="+catna+"&bitem="+batna,false);
+        xmlhttp.open("GET","item_upload_fold/full_cat_img.php?items="+catna+"&bitem="+batna,false);
         xmlhttp.send(null);
         $(".itit").html(xmlhttp.responseText);
     
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $("#igroup").change(function () {
         var group = $("#igroup").val();
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","item_up_bf_sel.php?items="+group,false);
+        xmlhttp.open("GET","item_update_fold/item_up_bf_sel.php?items="+group,false);
         xmlhttp.send(null);
         $("#smic").html(xmlhttp.responseText);
     
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $("#smic").change(function () {
         var group = $("#smic").val();
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","item_up_sel.php?items="+group,false);
+        xmlhttp.open("GET","item_update_fold/item_up_sel.php?items="+group,false);
         xmlhttp.send(null);
         $("#sii").html(xmlhttp.responseText);
     

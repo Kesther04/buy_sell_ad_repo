@@ -30,11 +30,11 @@
                 <?php }else{ ?>
                     
                     <li><a href="../../">Home</a></li>
-                    <li><a href="../../sales_dashboard/user/profile.php">Profile</a></li>
-                    <li><a href="../../sales_dashboard/user/saved.php">Saved</a></li>
-                    <li><a href="../../sales_dashboard/chat/">Messages</a></li>
-                    <li><a href="../../sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
-                
+                    <li><a href="../../sales_dashboard/">Profile</a></li>
+                    <li><a href="../../sales_dashboard/saved.php">Saved</a></li>
+                    <li><a href="../../sales_dashboard/all_chat.php">Messages</a></li>
+                    <li><a href="../../sales_dashboard/item_upload.php" id="sel-nav">SELL</a></li>
+                    
                 <?php  } ?>
                 
                 

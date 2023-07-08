@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
             $_SESSION['lga'] = $row['lga'];
             $_SESSION['des'] = $row['des'];
     
-            echo "<script>window.location='../sales_dashboard/item_upload/item_upload'</script>";
+            echo "<script>window.location='../sales_dashboard/'</script>";
         }else {
             echo "<script>window.location='login.php?msg=INCORRECT EMAIL OR PASSWORD'</script>";
         }

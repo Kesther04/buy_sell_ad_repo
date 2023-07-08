@@ -16,11 +16,11 @@
             if ($del_don) {
                 $del_eon = $del_ob->del_item_feat($id);
                 if ($del_eon) {
-                    header("location:../item_upload/item_upload.php");   
+                    echo "<script>window.location='../item_delete.php'</script>";   
                 }
             }
         }else {
-            header("location:../item_upload/item_upload.php?msg='item not deleted'");
+            echo "<script>window.location='../item_delete.php?msg=item not deleted'</script>";
         }
     }
 

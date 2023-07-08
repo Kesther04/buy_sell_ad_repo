@@ -1,6 +1,6 @@
-<script src="../../js/jquery.js"></script>
-<script src="../../js/ajax.js"></script>
-<script src="../../js/snd_np_form.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/snd_np_form.js"></script>
 
 <?php
 
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 ?>
 
 
-    <form class="itm_deld" action="backend_item_delete.php" method="post" enctype="multipart/form-data">
+    <form class="itm_deld" action="item_delete_fold/backend_item_delete.php" method="post" enctype="multipart/form-data">
         
 
         <div class="sec-div-container">
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
                     <div class="img-result">
                         <?php while ($dow = $sel_img->fetch_assoc()) { ?>
                             
-                            <img src="../../pics/<?php echo $dow['img'];  ?>" >
+                            <img src="../pics/<?php echo $dow['img'];  ?>" >
                         
                         <?php } ?>
                     </div>

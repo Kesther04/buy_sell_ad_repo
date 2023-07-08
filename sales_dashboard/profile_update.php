@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/snd_dash.js"></script>
     <title>DASHBOARD</title>
 </head>
 <body>
         
-    <?php require("../sales_dashboard_layout.php"); ?>
+    <?php require("sales_dashboard_layout.php"); ?>
 
    
     <div id="masag">
         <div class="msg">    
             <div class="msa"></div>
-            <a href="../../sales_auth/login.php" title="return to the login page"><button class="aj-btn">COMPLETE</button></a>
+            <a href="../sales_auth/login.php" title="return to the login page"><button class="aj-btn">COMPLETE</button></a>
         </div>
     </div>
     
     <section class="main-div-container">
         <div class="sec-div-container">
-            <form class="prof-upd" action="backend_profile_update.php" method="post">
+            <form class="prof-upd" action="user/backend_profile_update.php" method="post">
             
                 <div class="fir-div-container">
 
@@ -109,7 +109,7 @@
         </div>
     </section>
     
-    <script src="../../js/reed.js"></script>
-    <script src="../../js/loc_form.js"></script>
+    <script src="../js/reed.js"></script>
+    <script src="../js/loc_form.js"></script>
 </body>
 </html>

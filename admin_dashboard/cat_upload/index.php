@@ -1,1 +1,0 @@
-<?php header("location:cat_upload"); ?>

@@ -4,46 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/snd_dash.js"></script>
+    <script src="../js/rev.js"></script>
     
-    <!-- <script src="../../../js/metro.js"></script> -->
     <title>DASHBOARD</title>
     
 </head>
 <body>
 
-<?php require("../admin_dashboard_layout.php"); ?>
+<?php require("admin_dashboard_layout.php"); ?>
 
 <div id="masag">
     <div class="msg">    
         <div class="msa"></div>
-        <a href="cat_update.php" title="return to page"><button class="aj-btn">COMPLETE</button></a>
+        <a href="cat_img.php" title="return to page"><button class="aj-btn">COMPLETE</button></a>
     </div>
 </div>
 
 <section class="main-div-container">
 
-    <form  class="ful_cat_upd" action="full_cat_update.php" method="post" enctype="multipart/form-data">
+    <form  class="ful_cat_img" action="item_upload_fold/backend_cat_img.php" method="post" enctype="multipart/form-data">
     
 
         <div class="sec-div-container">
 
-            <h1>SELECT CATEGORY</h1>
+            <h1>UPDATE IMAGE</h1>
 
     
             <div class="fir-div-container">
                 <table>
-
-                    
                     <tr>
                         <td>
                             <?php 
-                                require("../../class/sel_class.php");
+                                require("../class/sel_class.php");
                                 $sel_ob = new SEL();
                                 $sel_con = $sel_ob->sel_all_grpcat();
                                 if ($sel_con) {
@@ -61,7 +58,6 @@
                                 </select>
                 
                             <?php } ?>
-
                         </td>
 
                         <td class="cat-typ">
@@ -71,18 +67,17 @@
                             </select>
                         </td>
                     </tr>
-
-
                 </table>
+
+                <table class="itit"></table>
 
                 
             </div>
           
        
             <div class="con-btn-div">
-                <button class="con-btn">ENTER</button>
+                <button class="con-btn">UPDATE</button>
             </div>
-    
    
         </div>
     </form>
@@ -91,6 +86,5 @@
 
 </section>
 
-    <!-- <script src="../../js/loc_form.js"></script> -->
 </body>
 </html>

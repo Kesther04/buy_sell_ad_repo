@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/feat.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/feat.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/snd_dash.js"></script>
     
-    <!-- <script src="../../../js/metro.js"></script> -->
+    <!-- <script src="../js/metro.js"></script> -->
     <title>DASHBOARD</title>
     
 </head>
 <body>
 
-<?php require("../admin_dashboard_layout.php"); ?>
+<?php require("admin_dashboard_layout.php"); ?>
 
 <div id="masag">
     <div class="msg">    
@@ -28,7 +28,7 @@
 
 <section class="main-div-container">
 
-    <form  class="cat_upl" action="backend_cat_upload.php" method="post" enctype="multipart/form-data">
+    <form  class="cat_upl" action="item_upload_fold/backend_cat_upload.php" method="post" enctype="multipart/form-data">
     
 
         <div class="sec-div-container">
@@ -82,6 +82,6 @@
 
 </section>
 
-    <!-- <script src="../../js/loc_form.js"></script> -->
+    <!-- <script src="../js/loc_form.js"></script> -->
 </body>
 </html>

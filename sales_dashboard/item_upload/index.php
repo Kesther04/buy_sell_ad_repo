@@ -1,1 +1,0 @@
-<?php header("location:item_upload") ?>

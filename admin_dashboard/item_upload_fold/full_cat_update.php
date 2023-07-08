@@ -1,8 +1,8 @@
 <?php if ($_SERVER['REQUEST_METHOD']=="POST") { ?>
 
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/feat.js"></script>
-    <script src="../../js/ajax.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/feat.js"></script>
+    <script src="../js/ajax.js"></script>
     <?php
         $icat = $_POST['icat'];
         $micat = $_POST['micat'];
@@ -16,7 +16,7 @@
 
     ?>
 
-    <form  class="cat_upd" action="backend_cat_update.php" method="post" enctype="multipart/form-data">
+    <form  class="cat_upd" action="item_upload_fold/backend_cat_update.php" method="post" enctype="multipart/form-data">
     
 
         <div class="sec-div-container">

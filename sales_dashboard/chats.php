@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "../../css/sdash.css" media ="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/ajax.js"></script>
+    <link rel = "stylesheet" href = "../css/sdash.css" media ="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/rev.js"></script>
+    <script src="../js/ajax.js"></script>
     
-    <title>USER MESSAGES</title>
+    <title>DASHBOARD</title>
 </head>
 <body id="total-div">
     
-    <?php require("../sales_dashboard_layout.php"); ?>
+    <?php require("sales_dashboard_layout.php"); ?>
 
     <section class='main-div-container' >
 
@@ -26,7 +26,7 @@
                 $sid = $_SESSION['id'];
                 $rname = str_ireplace('-',' ',$_GET['name']);
                 
-                require("../../class/sel_class.php");
+                require("../class/sel_class.php");
                 $sel_ob = new SEL();
             
                 echo "<h1 style='text-transform:uppercase;'>$rname</h1>";
@@ -98,7 +98,7 @@
         
         <div id="u-form">
         
-            <form class="chat-frm" method="post" action="backend_chats.php">
+            <form class="chat-frm" method="post" action="chat/backend_chats.php">
                 <div class="u-form">
                     <div class="fst-inner-u-form">
                         <input type="text" name="msg" placeholder="SEND MESSAGE" required>

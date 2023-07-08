@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".itm_upl").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_item_upload.php',
+            url:'item_upload_fold/backend_item_upload.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -23,7 +23,25 @@ $(document).ready(function () {
     $(".cat_upl").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_cat_upload.php',
+            url:'item_upload_fold/backend_cat_upload.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#masag").css({'visibility':'visible'});
+                $(".msa").html(dat);            
+
+            }
+        
+        });     
+    });
+
+    $(".ful_cat_img").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'item_upload_fold/backend_cat_img.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -41,7 +59,7 @@ $(document).ready(function () {
     $(".full_itm_upl").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'full_item_upload.php',
+            url:'item_upload_fold/full_item_upload.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -61,7 +79,7 @@ $(document).ready(function () {
     $(".del-itm").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'item_del_upload.php',
+            url:'item_delete_fold/item_del_upload.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -78,7 +96,7 @@ $(document).ready(function () {
     $(".upd-itm").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'item_uploaded.php',
+            url:'item_update_fold/item_uploaded.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -96,7 +114,7 @@ $(document).ready(function () {
     $(".itm_upld").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_item_update.php',
+            url:'item_update_fold/backend_item_update.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -114,7 +132,7 @@ $(document).ready(function () {
     $(".itm_deld").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_item_delete.php',
+            url:'item_delete_fold/backend_item_delete.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -168,7 +186,7 @@ $(document).ready(function () {
     $(".prof-upd").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_profile_update.php',
+            url:'user/backend_profile_update.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -188,7 +206,7 @@ $(document).ready(function () {
     $(".ful_cat_upd").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'full_cat_update.php',
+            url:'item_upload_fold/full_cat_update.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -207,7 +225,7 @@ $(document).ready(function () {
     $(".cat_upd").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_cat_update.php',
+            url:'item_upload_fold/backend_cat_update.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -227,7 +245,7 @@ $(document).ready(function () {
     $(".chat-frm").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'backend_chats.php',
+            url:'chat/backend_chats.php',
             type:'post',
             data:new FormData(this),
             cache:false,
@@ -415,6 +433,23 @@ $(document).ready(function () {
         e.preventDefault();
         $.ajax({
             url:'saved/del_saved.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#total-div").load("#total-div");
+            }
+            
+        });    
+    });
+
+
+    $(".sdel").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'../saved/del_saved.php',
             type:'post',
             data:new FormData(this),
             cache:false,

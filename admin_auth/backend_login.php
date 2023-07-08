@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
             $_SESSION['admin_name'] = $row['fullname'];
             $_SESSION['admin_pno'] = $row['pnumber'];
     
-            echo "<script>window.location='../admin_dashboard/cat_upload/cat_upload'</script>";
+            echo "<script>window.location='../admin_dashboard/'</script>";
         }else {
             echo "<script>window.location='login.php?msg=INCORRECT EMAIL OR PASSWORD'</script>";
         }

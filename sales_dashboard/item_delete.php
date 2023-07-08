@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/metro.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/rev.js"></script>
+    <script src="../js/metro.js"></script>
+    <script src="../js/snd_dash.js"></script>
     <title>DASHBOARD</title>
     
 </head>
 <body>
 
 <?php 
-    require("../sales_dashboard_layout.php");
-    require("../../class/sel_class.php");
+    require("sales_dashboard_layout.php");
+    require("../class/sel_class.php");
     $sel_ob = new SEL();
 ?>
 
@@ -30,7 +30,7 @@
             <p>ARE YOU SURE YOU WANT TO DELETE THIS ITEM DETAILS</p>
         </div>
         <div class="inner-secdc-del">
-            <form action="backend_sure_item_delete.php" method="post">
+            <form action="item_delete_fold/backend_sure_item_delete.php" method="post">
                 <div class="msa"></div>
                 <button class="aj-btn">Yes</button>
             </form>
@@ -47,7 +47,7 @@
         <h1>SELECT ITEM TO DELETE</h1>
 
         <div class="inner-secdc">
-            <form class="del-itm" action="item_del_upload.php" method="post">
+            <form class="del-itm" action="item_delete_fold/item_del_upload.php" method="post">
 
             <div class="fir-div-container">
                 <table>

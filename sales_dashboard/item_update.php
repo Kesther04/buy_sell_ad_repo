@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/sdash.css" media="all">
-    <link rel="stylesheet" href="../../css/sdash_rep.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/ajax.js"></script>
-    <script src="../../js/rev.js"></script>
-    <script src="../../js/metro.js"></script>
-    <script src="../../js/snd_dash.js"></script>
+    <link rel="stylesheet" href="../css/sdash.css" media="all">
+    <link rel="stylesheet" href="../css/sdash_rep.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/rev.js"></script>
+    <script src="../js/metro.js"></script>
+    <script src="../js/snd_dash.js"></script>
    
     <title>DASHBOARD</title>
     
@@ -18,8 +18,8 @@
 <body>
 
 <?php 
-    require("../sales_dashboard_layout.php"); 
-    require("../../class/sel_class.php");
+    require("sales_dashboard_layout.php"); 
+    require("../class/sel_class.php");
     $sel_ob = new SEL();
 ?>
 
@@ -37,7 +37,7 @@
             <h1>SELECT ITEM TO UPDATE</h1>
 
             <div class="inner-secdc">
-                <form class="upd-itm" action="item_uploaded.php" method="post">
+                <form class="upd-itm" action="item_update_fold/item_uploaded.php" method="post">
 
                     <div class="fir-div-container">
                         <table>

@@ -46,11 +46,11 @@
         <button id="hide-con"><?php echo $row['pnumber']; ?></button>
 
         <?php  if ($_SESSION['id'] == $sid) { ?>
-            <a href="../../sales_dashboard/chat/">
+            <a href="../../sales_dashboard/all_chat.php">
                 <button>START CHAT</button>
             </a>
         <?php }else {  ?>
-            <a href="../../sales_dashboard/chat/chats?id=<?php echo $uid; ?>&name=<?php echo str_replace(' ','-',$dow['fullname']); ?>">
+            <a href="../../sales_dashboard/chats.php?id=<?php echo $uid; ?>&name=<?php echo str_replace(' ','-',$dow['fullname']); ?>">
                 <button>START CHAT</button>
             </a>
         <?php } ?>
