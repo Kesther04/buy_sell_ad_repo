@@ -41,7 +41,7 @@
                         <?php if (!isset($_SESSION['id'])) { ?>
                             <li><a href="sales_auth/login.php">Sign in</a></li>
                             <li><a href="sales_auth/register.php">Registration</a></li>
-                            <li><a href="sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
+                            <li><a href="sales_dashboard/item_upload.php" id="sel-nav">SELL</a></li>
                         
                         <?php }else{ ?>
                             
@@ -226,7 +226,7 @@
                             <!-- save product to view in your saved -->
 
                             <?php if (!isset($_SESSION['id'])) { ?>
-                                <a href="sales_auth/login/login">
+                                <a href="sales_auth/login.php">
                                     <img src="images/save.svg" title="save commodity">
                                 </a>
                             <?php }else{ ?>

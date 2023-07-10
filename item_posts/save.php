@@ -2,7 +2,7 @@
     <!-- save product to view in your saved -->
 
     <?php if (!isset($_SESSION['id'])) { ?>
-        <a href="sales_auth/login/login">
+        <a href="../../sales_auth/login.php">
             <img src="../../images/save.svg" title="save commodity">
         </a>
     <?php }else{ ?>

@@ -24,7 +24,7 @@
                 <?php if (!isset($_SESSION['id'])) { ?>
                     <li><a href="../../../sales_auth/login.php">Sign in</a></li>
                     <li><a href="../../../sales_auth/register.php">Registration</a></li>
-                    <li><a href="../../../sales_dashboard/item_upload/item_upload.php" id="sel-nav">SELL</a></li>
+                    <li><a href="../../../sales_dashboard/item_upload.php" id="sel-nav">SELL</a></li>
                 
                 <?php }else{ ?>
                     
