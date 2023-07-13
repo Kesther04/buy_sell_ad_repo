@@ -1,7 +1,7 @@
 <?php 
-    if(!isset($_SESSION['id'])){
-        echo "<script>window.location='../../sales_auth/login.php'</script>";
-    }
+    // if(!isset($_SESSION['id'])){
+    //     echo "<script>window.location='../../../sales_auth/login.php'</script>";
+    // }
 ?>
 
 <div class="header">
