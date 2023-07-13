@@ -1,4 +1,4 @@
-<?php require("session_index.php"); ?>
+<?php require("session.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
