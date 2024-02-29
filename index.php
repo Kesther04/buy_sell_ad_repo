@@ -71,9 +71,24 @@
                     <div class="bf-con"></div>
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img src="images/wp4.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/wp6.jpg"></div>
-                        <div class="swiper-slide"><img src="images/wp3.jpg"></div>
+                        <div class="swiper-slide">
+                            <img src="images/main_slider_img1">
+                            <div class="swiper-slide-content">
+                                <h1>Welcome to our platform created to help privatize marketing mastery!!</h1>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/main_slider_img2">
+                            <div class="swiper-slide-content">
+                                <h1>Start your journey into the world of strategic promotion and branding</h1>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/main_slider_img3">
+                            <div class="swiper-slide-content">
+                                <h1>Join as we delve into the realm of impactful marketing campaigns and brand positioning strategies</h1>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- If we need pagination -->

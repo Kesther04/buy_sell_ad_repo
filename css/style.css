@@ -175,7 +175,7 @@ button{
     z-index: 15;
     width:100%;
     height:700px;
-    background-color: rgba(36, 0, 50, 0.4);
+    background-color: rgba(36, 0, 50, 0.2);
     
 }
 
@@ -184,9 +184,35 @@ button{
     height:fit-content;   
 }
 
+.swiper-slide {
+    position: relative;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    height:700px;
+}
+
 .swiper-slide img{
     width:100%;
     height:700px;
+}
+
+.swiper-slide-content{
+    position: absolute;top:0px;
+    display: flex;
+    padding:80px 0px 20px 0px;
+    justify-content:center;
+    align-items: flex-start;
+    width: 80%;
+    height:100%;
+}
+
+.swiper-slide-content h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: right;
+    color:white;
 }
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
