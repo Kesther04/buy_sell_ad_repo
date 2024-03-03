@@ -23,7 +23,11 @@
                 </div>
             </div>
 
-            <div style="font-weight:bold;"><?php echo $dow['des']; ?></div>
+            <?php if ($dow['des'] == '0') { ?>
+                <div style="font-weight:bold;">No Seller detail Provided</div>
+            <?php }else{ ?>
+                <div style="font-weight:bold;"><?php echo $dow['des']; ?></div>
+            <?php } ?>
         </div>
     </div>
 

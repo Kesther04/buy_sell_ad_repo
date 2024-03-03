@@ -964,11 +964,15 @@ button{
 
 .snd-mcpc-cat-img .cat-img{
     width:250px;
+    height:150px;
     margin:10px;
+    border-radius: 20px;
 }
 
 .snd-mcpc-cat-img .cat-img img{
     width:100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 #show-con{

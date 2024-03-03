@@ -17,7 +17,7 @@
     
     <td>
         <span>Update Image for <?php echo str_replace('-',' ',$_GET['bitem']); ?></span>
-        <input type="file" name="imgic"   accept="image/jpeg, image/jpg, image/png, image/jfif" onchange=getImagePreviewFilex(event)>
+        <input type="file" name="imgic"   accept="image/jpeg, image/jpg, image/png, image/jfif, image/avif" onchange=getImagePreviewFilex(event)>
         <input type="hidden" name="ano_imgic" value="<?php echo $row['ic_img']; ?>" required readonly>
     </td>
     <?php 
@@ -34,7 +34,7 @@
      
     <td>
         <span>Update Image for <?php echo str_replace('-',' ',$_GET['items']); ?></span>
-        <input type="file" name="imggic"   accept="image/jpeg, image/jpg, image/png, image/jfif" onchange=getImagePreviewFiles(event)>
+        <input type="file" name="imggic"   accept="image/jpeg, image/jpg, image/png, image/jfif, image/avif" onchange=getImagePreviewFiles(event)>
         <input type="hidden" name="ano_imggic" value="<?php echo $row['gic_img']; ?>" required readonly>
     </td>
     <?php 

@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
                 echo 'File size is too large';
                 
             }
-            elseif ($filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif") {
+            elseif ($filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif" AND $filetypeGic!=="image/avif") {
             
                 echo 'Invalid File Type';
         
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
                 echo 'File size is too large';
                 
             }
-            elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif") {
+            elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif" AND $filetypeIc!=="image/avif") {
             
                 echo 'Invalid File Type';
         
@@ -133,17 +133,17 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
             echo 'File sizes are too large';
             
         }
-        elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif") {
+        elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif" AND $filetypeIc!=="image/avif") {
         
             echo 'Invalid File Type for  item category';
     
         }
-        elseif ($filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif") {
+        elseif ($filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif" AND $filetypeGic!=="image/avif") {
         
             echo 'Invalid File Type for Main item category';
     
         }
-        elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif" AND $filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif") {
+        elseif ($filetypeIc!=="image/png" AND $filetypeIc!=="image/jpg" AND $filetypeIc!=="image/jpeg" AND $filetypeIc!=="image/jfif" AND $filetypeIc!=="image/avif" AND $filetypeGic!=="image/png" AND $filetypeGic!=="image/jpg" AND $filetypeGic!=="image/jpeg" AND $filetypeGic!=="image/jfif" AND $filetypeGic!=="image/avif") {
         
             echo 'Invalid File Types';
     
